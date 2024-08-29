@@ -1,0 +1,901 @@
+body,
+#slider,
+.wrap,
+.slide-content {
+  margin: 0;
+  padding: 0;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden; /*gets rid of horizontal scroll bars */
+}
+
+.wrap {
+  position: relative;
+  border: 6px solid white;
+}
+
+.slide {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* editing each slide individually */
+.slide1 {
+  background-image: url("images/Mountain.jpeg");
+}
+
+.slide2 {
+  background-image: url("images/MatGoats.jpeg");
+}
+
+.slide3 {
+  background-image: url("images/CoverPic1a.jpg");
+}
+
+/* slide content */
+.slide-content{
+   display: flex;
+   flex-direction: column; 
+   justify-content: center;
+   align-items: center;
+   text-align: center; 
+}
+
+.slide-content span{
+   font-size: 5rem; 
+   color: white;
+}
+
+.arrow{
+   cursor: pointer;
+   position: absolute;
+   top: 50%;
+   margin-top: -30px;
+   width: 0;
+   height: 0;
+   border-style: solid;
+}
+
+#arrow-left{
+   border-width: 30px 40px 30px 0; /* top right bottm left */
+   border-color: transparent rgba(255, 255, 255, 0.603) transparent transparent;
+   left: 0;
+   margin-left: 30px;
+}
+
+#arrow-right{
+   border-width: 30px 0 30px 40px; /* top right bottm left */
+   border-color: transparent transparent transparent rgba(255, 255, 255, 0.603);
+   right: 0;
+   margin-right: 30px;
+}
+
+/* edit nav */
+.navigation{
+   /* float: left; */
+   width: 30px;
+   display: block;
+   margin: -49% 0 0 1em; /*top right bottom left*/
+   /* margin-top: -49%; */
+   /* background-color: rgb(255, 255, 255); */
+   height: 50px;
+}
+
+/* .wrap {
+   position: relative;
+   border: 6px solid white;
+ } */
+ 
+ /* removes underline */
+ a {
+   text-decoration: none;
+ }
+ /* 
+ navigation banner  */
+ nav {
+   position: fixed;
+   left: 0;
+   top: 0;
+   width: 100%;
+   background: rgb(19, 98, 98);
+   z-index: 2;
+   /* padding: 20px; */
+ }
+ 
+ /* edit content in navigation banner */
+ nav .nav_content {
+   height: 100%;
+   max-width: 440px;
+   /* margin-left: 20px; */
+   margin: auto;
+   display: flex;
+   justify-content: space-between;
+   align-items: center; /*manage content in same line*/
+ }
+ 
+ /* edit logo */
+ nav .nav_content .logo a {
+   font-size: 30px;
+   font-weight: 500;
+   color: white;
+   margin-left: -200%;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   
+ }
+ 
+ /* editing the text of the links */
+ nav .nav_content .nav_links {
+   display: flex;
+  
+   /* align-items: right; */
+   margin-right: -100%;
+ }
+ 
+ nav .nav_links li {
+   list-style: none;
+   margin: 0 10px;
+ }
+ 
+ nav .nav_links a {
+   font-size: 18px;
+   font-weight: 500;
+   color: white;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }
+
+ .trailer{
+   padding-left: 5px;
+   padding-top: 2px;
+ }
+
+  .trailer i{
+   /* font-size: 18px; */
+   color: white;
+   position: relative;
+   /* width: 50px;
+   height: 50px; */
+   
+ }
+
+ /* editing the number next to the cart */
+ .trailer span{
+  
+   display: flex;
+   color: white;
+   font-weight: 500;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   width: 25px;
+   height: 25px;
+   background-color: rgb(23, 133, 133);
+   justify-content: center;
+   align-items: center;
+   border-radius: 50%;
+   position: absolute;
+   top: 10%;
+   right: 80px;
+}
+
+
+/* edit of the test 3 lines */
+/* .container div{
+   float: left;
+   height: 4px;
+   background-color: rgb(19, 98, 98);
+   margin: 5px 0;
+   border-radius: 25px;
+   transition: 0.3;
+   cursor: pointer;
+} */
+
+/* edit first line of nav bars */
+/* .one {
+   width: 30px;
+} */
+
+/* edit second line of nav bars */
+/* .two {
+   width: 20px;
+} */
+
+/* edit third line of nav bars */
+/* .three {
+   width: 25px;
+} */
+
+/*copies top lines width so makes a movement if you hover*/
+/* .navigation:hover div{
+     width: 30px;
+} */
+
+/* frame1 style */
+.frame1{
+    width: 150px;
+    height: 390px;
+    background-color: rgb(255, 255, 255);
+    margin-top: 20px;
+    margin-left: 35px;
+    border-radius: 10px;
+    visibility: hidden;
+   
+}
+
+/* editing the text in the frame */
+.frame1 .info {
+   font-size: 15px;
+   color: rgb(0, 0, 0);
+   border-bottom: 1px solid rgb(19, 98, 98);
+   padding-top: 13px;
+   cursor: pointer;
+   list-style-type: none;
+   margin-left: 10px;
+   /* padding-right: -10px;  */
+}
+
+/* editing the content style of web names  */
+.frame1 .info span li a{
+   /* margin-left: 10px; */
+   text-decoration: none;
+   color: black;
+   /* margin-right: 10%; */
+}
+
+/* editing the list of animals text FINAL */
+.frame1 ul li a{
+   font-size: 15px;
+   color: rgb(0, 0, 0);
+   /* border-bottom: 1px solid white; */
+   padding-top: 20px;
+   cursor: pointer;
+   text-decoration: none;
+   
+}
+
+/* highlighhts info if you hover over it */
+.frame1 .info:hover{
+   background-color: rgba(0, 255, 255, 0.19);
+}
+
+.frame1 ul:hover{
+   background-color: rgba(0, 255, 255, 0.19);
+   list-style-type: none;
+}
+
+/* editing the exit button */
+/* .frame1 span{
+   margin-left: 10px;
+} */
+
+/* editing the header banner with animal types */
+#animalType{
+   text-align: center;
+}
+
+/* editing each individual block */
+#animalType .typeContainer{
+   display: flex;
+   justify-content: space-between;
+   padding-top: 20px;
+   padding-left: 70px;
+   padding-right: 70px;
+   flex-wrap: wrap; /*puts blocks on seperate lines*/
+}
+
+#animalType .eaType{
+   width: 23%;
+   min-width: 250px;
+   padding: 10px 12px;
+   border: 1px solid #ddecdf;
+   border-radius: 25px;
+   cursor: pointer;
+   box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+   margin-right: 30px;
+   margin-top: 60px;
+   margin-left: 5px;
+   /* margin: 15px 0 10px 20px; */
+   /* margin: 15px 0; */
+   transition: 0.2s ease;
+   position: relative; 
+}
+
+#animalType .eaType:hover {
+   box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+}
+
+/* edit the heading of animal type */
+#animalType h3{
+   font-size: 30px;
+   color: rgb(19, 98, 98);
+}
+
+/* editing the information in the frames */
+#animalType span{
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'Arial Narrow', Arial, sans-serif;
+}
+
+/* edit image of block */
+#animalType .stockImage{
+   margin-left: 0;
+   width: 200px;
+   height: 200px;
+   margin-top: 10%;
+}
+
+/* editing the product block under featured */
+#product1{
+   text-align: center;
+}
+
+/* editing the heading  */
+#product1 h2{
+   font-size: 70px;
+   color: white;
+   margin-top: 10%;
+   padding-top: 3%;
+   padding-bottom: 3%;
+   background-color: rgba(17, 122, 122, 0.912);
+}
+
+/* editing the desc under heading */
+#product1 p{
+   font-size: 20px;
+   color: rgba(0, 0, 0, 0.39);
+  
+   /* padding-top: -20px; */
+}
+
+/* edit the container for all blocks */
+#product1 .prod-container
+{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-left: 70px;
+    padding-right: 70px;
+    flex-wrap: wrap; /*puts blocks on seperate lines*/
+}
+
+/* edit the container for all blocks */
+#product1 .prod-container2
+{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-left: 70px;
+    padding-right: 70px;
+    flex-wrap: wrap; /*puts blocks on seperate lines*/
+}
+
+/* box border around the image */
+#product1 .pro{
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid #ddecdf;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+    margin-right: 30px;
+    margin-bottom: 40px;
+    margin-left: 30px;
+    /* margin: 15px 0 10px 20px; */
+    /* margin: 15px 0; */
+    transition: 0.2s ease;
+    position: relative; /*makes absolute relative for child*/
+}
+
+#product1 .pro:hover {
+   box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+}
+
+/* edit the image itself */
+#product1 .pro img{
+   width: 100%;
+   height: 60%;
+   border-radius: 20px;
+}
+
+/* editing the text under image */
+#product1 .pro .des{
+   text-align: start;
+   padding: 10px 0;
+}
+
+/* editing the animal type text */
+#product1 .pro .des span{
+   color: rgba(0, 0, 0, 0.481);
+   font-size: 12px;
+}
+
+/* edit the heading of the animal: name */
+#product1 .pro .des h5{
+   padding-top: 0%;
+   color: black;
+   font-size: 18px;
+}
+
+/* edit the price text */
+#product1 .pro .des h4{
+   padding-top: 0px;
+   font-size: 15px;
+   font-weight: 700;
+   color: rgb(78, 174, 174);
+}
+
+/* edit the shopping cart icon */
+#product1 .pro .trailer{
+   width: 50px;
+   height: 50px;
+   line-height: 50px;
+   border-radius: 50px;
+   background-color: aliceblue;
+   /* font-weight: 500; */
+   color: rgb(19, 98, 98);
+   border: 1px solid #cce7d0;
+   position: absolute; /*everytime you use absolute in child element you must know the parent element*/
+   bottom: 20px;
+   right: 20px;
+}
+
+/* class for margin for banner, adds space top and bottom */
+.section-m1 {
+   margin: 40px 0;
+}
+
+/*edit content of button*/
+button.normal{
+    font-size: 14px;
+    font-weight: 600px;
+    padding: 15px 30px;
+    color: rgb(19, 98, 98);
+    background-color: aliceblue;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+    /* margin-bottom: -5%; */
+}
+
+/* editing content of the banner */
+#banner{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   background-image: url("images/Banner.png");
+   width: 100%;
+   height: 40vh;
+   background-size: cover;
+   background-position: center;
+}
+
+/* edit text of banner */
+#banner h4{
+    color: rgb(19, 98, 98);
+    font-size: 30px;
+    /* margin-top: 20px; */
+}
+
+/* edit text of banner */
+#banner h2{
+   color: rgb(19, 98, 98);
+   font-size: 40px;
+   /* padding-bottom: 5%; */
+}
+
+/* edit text of banner */
+#banner h2 span{
+   color: rgb(14, 46, 46);
+   font-size: 50px;
+   /* padding-bottom: 30px; top and bottom */
+}
+
+/* hover feature on button */
+#banner button:hover{
+   background: rgb(19, 98, 98);
+   color: #fff;
+}
+
+/* editing the display of the 2 blocks to be next to each other */
+#sm-banner{
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   padding-left: 6%;
+   padding-right: 6%;
+   padding-top: 5%;
+}
+
+/* edit the content of each banner block */
+#sm-banner .banner-box{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: flex-start; /*puts text at the start of block*/
+   /* text-align: center; */
+   background-image: url("images/BannerBox1.png");
+   min-width: 580px;
+   height: 60vh;
+   background-size: cover;
+   background-position: center;
+   padding-left: 30px;
+}
+
+/* edit the background pic of box 2 */
+#sm-banner .banner-box2{
+   background-image: url("images/BannerBox2.png");
+}
+
+/* edit text of h4 */
+#sm-banner h4{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+/* edit text of h2 */
+#sm-banner h2{
+   color: #fff;
+   font-size: 30px;
+   font-weight: 800;
+}
+
+/* edit text of span */
+#sm-banner span{
+   color: #fff;
+   font-size: 14px;
+   font-weight: 500;
+   padding-bottom: 15px;
+}
+
+/* edit the button */
+button.white{
+   font-size: 13px;
+    font-weight: 600px;
+    padding: 11px 80px;
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    /* border-radius: 4px; */
+    cursor: pointer;
+    border: 1px solid white;
+    outline: none;
+    transition: 0.2s;
+}
+
+/* hover feature for button */
+button.white:hover{
+   background: rgb(19, 98, 98);
+   color: #fff;
+}
+
+#banner3{
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   padding-top: 5%;
+   padding-bottom: 80px;
+   padding-left: 6%;
+   padding-right: 6%;
+}
+
+/* editing banner 3 block */
+#banner3 .banner-box{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: flex-start; /*puts text at the start of block*/
+   /* text-align: center; */
+   background-image: url("images/BannerBox1.png");
+   min-width: 30%;
+   height: 30vh;
+   background-size: cover;
+   background-position: center;
+   padding-left: 20px;
+   margin-bottom: 20px;
+}
+
+#banner3 h2{
+   color: #fff;
+   font-weight: 900;
+   font-size: 22px;
+}
+
+#banner3 h3{
+   color: rgb(19, 98, 98);
+   font-weight: 800;
+   font-size: 15px;
+}
+
+/* edit the background pic of box 2 */
+#banner3 .banner-box2{
+   background-image: url("images/BannerBox2.png");
+}
+
+/* edit the background pic of box 3 */
+#banner3 .banner-box3{
+   background-image: url("images/BannerBox2.png");
+}
+
+#contactBanner{
+   /* text-align: center; */
+   border-top: 3px solid rgb(14, 46, 46);
+   
+}
+
+/* edit the bottom banner contact us */
+#contactBanner .contContainer{
+   /* background-color: rgb(78, 174, 164); */
+   background-image: url("images/IMG_0540.jpeg");
+   opacity: 40%;
+   /* padding-top: 1%; */
+   padding-bottom: 1%;
+   padding-left: 1%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   background-size: cover;
+   background-position: center;
+}
+
+/* edit h3 contact heading */
+#contactBanner h3{
+     font-size: 40px;
+     color: white;
+     
+}
+
+/* edit content text in block */
+#contactBanner .phone{
+   font-size: 20px;
+   color: white;
+   margin-top: -1%;
+}
+
+/* edit content text in block */
+#contactBanner .email{
+   font-size: 20px;
+   color: white;
+   margin-top: -1%;
+}
+
+/* edit content text in block */
+#contactBanner .whatsapp{
+   font-size: 20px;
+   color: white;
+   margin-top: -1%;
+}
+
+/* edit content text in block */
+#contactBanner .address{
+   font-size: 20px;
+   color: white;
+   margin-top: -1%;
+}
+
+
+/*stock div edit*/
+.stock{
+   background-color: rgba(237, 227, 212, 0.747);
+   display: grid;
+   grid-template-columns: auto auto auto;
+   /* margin-top: 150px; */
+   margin-left: 40px;
+}
+
+/* editing the sale header */
+.saleHeader{
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   margin-left: 25%;
+}
+
+.stockImage{
+   margin-left: 25%;
+   width: 200px;
+   height: 300px;
+   margin-top: 10%;
+   
+}
+
+/* get rid of bullet point */
+.pigs{
+   list-style-type: none;
+}
+
+.goats{
+   list-style-type: none;
+}
+
+.chickens{
+   list-style-type: none;
+}
+
+.cows{
+   list-style-type: none;
+}
+
+.sheep{
+   list-style-type: none;
+}
+
+.Feed {
+   list-style-type: none;
+}
+
+
+
+/* text block editing for pig paragraph */
+.textBox{
+   border: 3px solid black;
+   margin-right: 29%;
+   margin-left: 25%;
+}
+
+/* start of blackbox css for cart tab */
+.add-to-cart{
+   background-color: #17b49d;
+   color: #fff;
+   padding: 10px 50px;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   /* width: 100px; */
+}
+
+/* editing what happens if you hover over add to cart */
+.add-to-cart:hover {
+   background-color: #6e6e6e;
+ }
+
+.cart {
+   margin-top: 5px;
+   margin-left: 30%;
+   margin-right: 30%;
+   padding: 20px;
+   border: 1px solid #ddd;
+   border-radius: 10px;
+ }
+
+  h2 #cartHead{
+   /* display: flex;
+   flex-direction: column; */
+   margin-left: 30%;
+   bottom: 50%;
+   height: 20px;
+   width: 40%;
+   top: 10px;
+   
+ }
+
+ /* all the items in the cart style */
+ #cart-list{
+   list-style: none;
+   padding: 0;
+   margin: 0;
+   
+ }
+
+ #cart-list li{
+   padding: 10px;
+   border-bottom: 1px solid #ddd;
+   font-size: 20px;
+ }
+
+ #cart-list li:last-child{
+   border-bottom: none;
+ }
+
+ /* editing the total at the bottom of cart tab */
+ #cart-total{
+   font-weight: bold;
+   font-size: 18px;
+   margin-top: 20px;
+ }
+
+ /* editing the remove button */
+ .remove-from-cart
+ {
+  background-color: #6e6e6e;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  margin-left: 15px;
+  cursor: pointer;
+ }
+
+  /* editing what happens if you hover over remove */
+.remove-from-cart:hover {
+   background-color: #17b49d;
+ }
+
+ /* editing the checkout button  */
+ #checkout{
+   background-color: #17b49d;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+ }
+
+ /* editing what happens if you hover over checkout */
+#checkout:hover {
+   background-color: #6e6e6e;
+ }
+/* end of blackbox css */
+
+/* makes the footer responsive */
+footer{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   background-color: rgba(19, 98, 98, 0.645);
+   padding-left: 8px;
+   padding-right: 8px;
+   /* background-image: url("images/IMG_0542.jpeg"); */
+ }
+ 
+ /* puts the text in right format */
+ footer .column{
+   display: flex;
+   flex-direction: column; /*puts the text in a column under ea. other*/
+   align-items: flex-start;
+   margin-bottom: 20px;
+ }
+ 
+ /* footer .logo{
+     margin-bottom: 30px;
+     width: 40px;
+     height: 40px;
+ } */
+ 
+ footer h4{
+   font-size: 20px;
+   padding-bottom: 20px;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   color: rgb(19, 98, 98);
+ }
+ 
+ footer p{
+   font-size: 16px;
+   margin: 0 0 8px 0; /*top right bottom left*/
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   color: white;
+ }
+ 
+ footer a{
+   font-size: 16px;
+   color: #222;
+   margin-bottom: 10px; /*top right bottom left*/
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   color: white;
+ }
+ 
+ footer .follow{
+     margin-top: 20px;
+ }
+ 
+ footer .follow i{
+   color: white;
+   cursor: pointer;
+   padding-right: 4px;
+   font-size: 40px;
+ }
+ 
+ footer i:hover,
+ footer a:hover{
+    color: #088178;
+ }
+ 
+ footer .copyright{
+   width: 100%;
+   text-align: center;
+ }
+ 
+ 
+ 
+ 
+ 
+ 

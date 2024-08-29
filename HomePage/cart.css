@@ -1,0 +1,238 @@
+
+/* removes underline */
+a {
+    text-decoration: none;
+  }
+  /* 
+  navigation banner  */
+  nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: rgb(19, 98, 98);
+    /* padding: 20px; */
+  }
+  
+  /* edit content in navigation banner */
+  nav .nav_content {
+    height: 100%;
+    max-width: 440px;
+    /* margin-left: 20px; */
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /*manage content in same line*/
+  }
+  
+  /* edit logo */
+  nav .nav_content .logo a {
+    font-size: 30px;
+    font-weight: 500;
+    color: white;
+    margin-left: -200%;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* editing the text of the links */
+  nav .nav_content .nav_links {
+    display: flex;
+  
+    /* align-items: right; */
+    margin-right: -100%;
+  }
+  
+  nav .nav_links li {
+    list-style: none;
+    margin: 0 10px;
+  }
+  
+  nav .nav_links a {
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  /* editing the body of the cart */
+  .wrapper{
+    max-width: 1000px;
+    margin: 0 auto;
+    /* background-color: rgb(19, 98, 98); */
+  }
+
+  .wrapper h1{
+    margin-top: 5%;
+    padding: 30px 0;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .project{
+    display: flex;
+  }
+
+  .shop{
+    flex: 75%;
+  }
+
+  /* each individual item box */
+  .box{
+    display: flex;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    background: rgb(255, 255, 255);
+    transition: all 0.6s ease;
+    box-shadow: rgb(19, 98, 98) 0 7px 29px 0;
+  }
+
+  .box:hover{
+    transform: scale(1.02);
+  }
+
+  .box img{
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  /* editing the content next to the image  */
+ .content{
+    padding: 20px;
+    position: relative;
+    width: 100%;
+ }
+
+  /* editing the content next to the image  */
+  .content h3{
+    margin-bottom: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }
+
+   /* editing the content next to the image  */
+   .content h3{
+    margin-bottom: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }
+
+ .btn-area{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 25px;
+    background-color: rgb(19, 98, 98);
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+    font-weight: 600;
+ }
+
+ .btn-area:hover{
+    background-color: rgba(19, 98, 98, 0.523);
+    color: white;
+ }
+
+.unit input{
+    width: 50px;
+    padding: 8px;
+    text-align: center;
+}
+
+.btn-area i{
+    margin-right: 5px;
+}
+
+.right-bar{
+    flex: 25%;
+    margin-left: 20px;
+    padding: 20px;
+    height: 400px;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: rgb(19, 98, 98) 0 7px 29px 0;
+}
+
+.right-bar hr{
+   margin-bottom: 25px; 
+}
+
+.right-bar p{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    font-size: 20px;
+}
+
+.right-bar a{
+    background-color: rgb(19, 98, 98);
+    color: white;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    font-weight: 900;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.right-bar i{
+    margin-right: 15px;
+   
+}
+
+.right-bar a:hover{
+    background-color: aqua;
+}
+
+@media screen and (max-width: 700px){
+    .content h3{
+        margin-bottom: 15px;
+    }
+
+    .content h4{
+        margin-bottom: 20px;
+    }
+
+    .btn2{
+        display: none;
+    }
+
+    .box{
+        height: 150px;
+    }
+
+    .box img{
+        height: 150px;
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .project{
+        flex-direction: column;
+    }
+
+    .right-bar{
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+}
+
+
+@media screen and (max-width: 1250px){
+    .wrapper{
+        max-width: 95%;
+    }
+}
+
+/* start of styling for phase 2 test */
+
+#cartContents{
+   margin-top: 5%;
+}
+
+.totalBar{
+  margin-top: 10%;
+}

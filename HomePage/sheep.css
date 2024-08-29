@@ -1,0 +1,275 @@
+
+/* removes underline */
+a {
+   text-decoration: none;
+ }
+ /* 
+   navigation banner  */
+ nav {
+   position: fixed;
+   left: 0;
+   top: 0;
+   width: 100%;
+   background: rgb(19, 98, 98);
+    z-index: 1; /*stops the overlapping of nav bar */
+   /* padding: 20px; */
+ }
+ 
+ /* edit content in navigation banner */
+ nav .nav_content {
+   height: 100%;
+   max-width: 440px;
+   /* margin-left: 20px; */
+   margin: auto;
+   display: flex;
+   justify-content: space-between;
+   align-items: center; /*manage content in same line*/
+ }
+ 
+ /* edit logo */
+ nav .nav_content .logo a {
+   font-size: 30px;
+   font-weight: 500;
+   color: white;
+   margin-left: -200%;
+   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+ }
+ 
+ /* editing the text of the links */
+ nav .nav_content .nav_links {
+   display: flex;
+ 
+   /* align-items: right; */
+   margin-right: -100%;
+ }
+ 
+ nav .nav_links li {
+   list-style: none;
+   margin: 0 10px;
+ }
+ 
+ nav .nav_links a {
+   font-size: 18px;
+   font-weight: 500;
+   color: white;
+   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+ }
+ 
+
+ /* editing the szie of the header */
+ .header{
+    display: flex;
+    margin-top: 5%;
+    text-align: center;
+    align-items: center; /*moves the text mid center*/
+    height: 50vh;
+ }
+
+ /* editing the image of the header */
+ .header img{
+  position: relative;
+  background-size: cover;
+  width: 100%;
+  height: 70vh;
+  opacity: 50%;
+ }
+
+ /* editing the text on the header  */
+ .header span{
+   background-color: #ffffffbb;
+  position: absolute;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   color: rgba(19, 98, 98, 0.696);
+   font-weight: bold;
+   font-size: 75px;
+   /* float: left; */
+   text-align: center;
+   padding-left: 3%;
+   padding-right: 3%;
+   margin-left: 36%;
+   /* text-shadow: 3px 3px 2px rgb(19, 98, 98); */
+   /* First value = horizontal offset. Positive = right, negative = left.
+Second value = vertical offset. Positive = down, negative = up.
+Third value = blur radius. Higher = more blurred shadow, lower = sharper shadow.*/
+ } 
+
+/* editing the "our pigs" header */
+ .bannerHead{
+  position: relative;
+  display: flex;
+  margin-top: 10%;
+  background-color: rgba(19, 98, 98, 0.748);
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+}
+ 
+/* editing the actual header content */
+.bannerHead h1{
+   font-weight: bold;
+   font-size: 30px;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   color: white;
+   padding-left: 35%;
+  }
+
+.stockContainer{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 5%;
+  margin-top: 5%;
+  flex-wrap: wrap; /*puts blocks on seperate lines*/
+  /* background-color: rgba(19, 98, 98, 0.447); */
+  width: 90%;
+  height: auto;
+}
+
+
+.indivStock{
+    width: 23%;
+    min-height: 400px;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid #ddecdf;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+    margin-right: 30px;
+    margin-bottom: 40px;
+    margin-left: 30px;
+    margin-top: 30px;
+    /* margin: 15px 0 10px 20px; */
+    /* margin: 15px 0; */
+    transition: 0.2s ease;
+    position: relative; /*makes absolute relative for child*/
+}
+
+.indivStock:hover{
+  box-shadow: 4px 4px 2px rgba(19, 98, 98, 0.748);
+}
+
+/* ediiting the image within the container block */
+.indivStock img{
+  width: 100%;
+  height: 70%;
+  border-radius: 20px;
+}
+
+/* ediiting the heading within the container block */
+.indivStock h2{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* color: rgba(0, 0, 0, 0.774); */
+  color: rgb(19, 98, 98);
+  font-size: 20px;
+}
+
+/* ediiting the description within the container block */
+.indivStock .description{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: rgba(0, 0, 0, 0.468);
+  font-size: 15px;
+}
+
+/* ediiting the price within the container block */
+.indivStock .price{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: rgba(0, 0, 0, 0.699);
+  font-size: 15px;
+  font-weight: bold;
+}
+
+/* edit the shopping cart icon */
+.stockContainer .indivStock .trailer{
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 50px;
+  background-color: aliceblue;
+  /* font-weight: 500; */
+  color: rgb(19, 98, 98);
+  border: 1px solid #cce7d0;
+  position: absolute; /*everytime you use absolute in child element you must know the parent element*/
+  bottom: 20px;
+  right: 20px;
+  
+}
+
+.stockContainer .indivStock .trailer:hover{
+  box-shadow: -4px 1px 5px rgba(178, 178, 178, 0.542);
+}
+
+/* makes the footer responsive */
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: rgba(19, 98, 98, 0.645);
+  padding-left: 8px;
+  padding-right: 8px;
+  /* background-image: url("images/IMG_0542.jpeg"); */
+}
+
+/* puts the text in right format */
+footer .column {
+  display: flex;
+  flex-direction: column; /*puts the text in a column under ea. other*/
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+/* footer .logo{
+    margin-bottom: 30px;
+    width: 40px;
+    height: 40px;
+} */
+
+footer h4 {
+  font-size: 20px;
+  padding-bottom: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(19, 98, 98);
+}
+
+footer p {
+  font-size: 16px;
+  margin: 0 0 8px 0; /*top right bottom left*/
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+}
+
+footer a {
+  font-size: 16px;
+  color: #222;
+  margin-bottom: 10px; /*top right bottom left*/
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+}
+
+footer .follow {
+  margin-top: 20px;
+}
+
+footer .follow i {
+  color: white;
+  cursor: pointer;
+  padding-right: 4px;
+}
+
+footer i:hover,
+footer a:hover {
+  color: #088178;
+}
+
+footer .copyright {
+  width: 100%;
+  text-align: center;
+}
+
+
+
+
+ 
+ 
+ 

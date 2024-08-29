@@ -1,0 +1,263 @@
+/* removes underline */
+a {
+    text-decoration: none;
+  }
+
+/*navigation banner  */
+nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background: rgb(19, 98, 98);
+  /* padding: 20px; */
+}
+
+/* edit content in navigation banner */
+nav .nav_content {
+  height: 100%;
+  max-width: 440px;
+  /* margin-left: 20px; */
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /*manage content in same line*/
+}
+
+/* edit logo */
+nav .nav_content .logo a {
+  font-size: 30px;
+  font-weight: 500;
+  color: white;
+  margin-left: -200%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* editing the text of the links */
+nav .nav_content .nav_links {
+  display: flex;
+
+  /* align-items: right; */
+  margin-right: -100%;
+}
+
+nav .nav_links li {
+  list-style: none;
+  margin: 0 10px;
+}
+
+nav .nav_links a {
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* styling the top banner */
+.banner-top {
+  text-align: center;
+  margin-top: -100px;
+}
+
+.banner-top h1{
+
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 56px;
+  text-transform: uppercase;
+  color: rgb(49, 121, 121);
+}
+
+.banner-top p{
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+  font-size: 20px;
+  color: rgba(19, 98, 98, 0.771);
+}
+
+/* start styling the content on the page */
+
+  body {
+    margin-top: 15%;
+    overflow: hidden;
+    background-color: #f0f0f0;
+}
+
+#gameArea {
+    position: relative;
+    width: 100vw;
+    height: 250px;
+    /* background-color: #cfcfcf; */
+    background-color: rgb(136, 189, 210);
+    overflow: hidden;
+}
+
+#stickMan {
+  position: absolute;
+  bottom: 0; /*start from bottom of game area */
+  width: 30px;
+  height: 80px;
+  left: 20px; /* Adjust as needed */
+  transition: bottom 0.3s ease-in-out; /*Smooth transition for jumping*/
+}
+
+.stickMan.jump {
+  animation: jump 0.3s ease-in-out forwards; /* Adjust timing to match the jump duration */
+}
+
+@keyframes jump {
+  0% { transform: translateY(0); }
+    50% { transform: translateY(-120px); } /* Adjust height of the jump */
+    100% { transform: translateY(0); }
+}
+
+#hat {
+  position: absolute;
+  width: 30px;
+  height: 10px;
+  background-color: #ba7d02; /* hat color */
+  border-radius: 30%;
+  top: -5px;
+  left: 0;
+  z-index: 2; /* Ensure the hat is in front of the head */
+}
+
+#hatLine {
+  position: absolute;
+  width: 50px;
+  height: 2px;
+  background-color: #ba7d02; /* hat color */
+  border-radius: 10%;
+  top: 3px;
+  left: -10px;
+  z-index: 2; /* Ensure the hat is in front of the head */
+}
+
+#head {
+  position: absolute;
+  width: 30px;
+  height: 20px;
+  background-color: #000000; /* Skin color */
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  z-index: 1; /* Ensure the head is behind the hat */
+}
+
+#body {
+  position: absolute;
+  width: 10px;
+  height: 60px;
+  background-color: #000; /* Stick color */
+  top: 10px;
+  left: 10px;
+}
+
+#leftArm, #rightArm {
+  position: absolute;
+  width: 8px;
+  height: 25px;
+  background-color: #000; /* Stick color */
+  top: 20px;
+}
+
+#leftArm {
+  transform: rotate(-45deg);
+  transform-origin: top right;
+  left: 8px;
+}
+
+#rightArm {
+  transform: rotate(45deg);
+  transform-origin: top left;
+  right: 8px;
+}
+
+#leftLeg, #rightLeg {
+  position: absolute;
+  width: 10px;
+  height: 30px;
+  background-color: #000; /* Stick color */
+  top: 60px;
+}
+
+#leftLeg {
+  left: 0;
+}
+
+#rightLeg {
+  right: 0;
+}
+
+#cactus {
+  position: absolute;
+  bottom: 0;
+  width: 20px;
+  height: 100px;
+  background-color: #4CAF50; /* Cactus color */
+  border-radius: 5px;
+}
+
+#cactus::before,
+#cactus::after {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 30px;
+  background-color: #4CAF50; /* Cactus color */
+  border-radius: 5px;
+}
+
+#cactus::before {
+  top: 15px;
+  left: -15px; /* Adjust to position the arm */
+  transform: rotate(-45deg);
+}
+
+#cactus::after {
+  bottom: 34px;
+  right: -15px; /* Adjust to position the arm */
+  transform: rotate(45deg);
+}
+
+
+/* #jumpButton {
+  position: absolute;
+  bottom: 20px; /* Position the button at the bottom of the game area 
+  right: 20px; /* Adjust the position as needed 
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4CAF50; 
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+} 
+
+#jumpButton:hover {
+  background-color: #45a049; 
+} */
+
+.bannerBottom{
+   margin-top: 50px;
+   text-align: center;
+}
+
+.bannerBottom p{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
+}
+
+.bannerBottom button{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  padding: 10px 10px;
+  border-radius: 40px;
+  background-color: rgba(19, 98, 98, 0.771);
+  border: 1px solid azure;
+}
+
+
+.bannerBottom button:hover{
+  
+  background-color: rgb(99, 177, 177);
+  
+}

@@ -1,0 +1,269 @@
+* {
+ 
+.wrap {
+  position: relative;
+  border: 6px solid white;
+}
+
+/* removes underline */
+a {
+  text-decoration: none;
+}
+/* 
+navigation banner  */
+nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background: rgb(19, 98, 98);
+  /* padding: 20px; */
+}
+
+/* edit content in navigation banner */
+nav .nav_content {
+  height: 100%;
+  max-width: 440px;
+  /* margin-left: 20px; */
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /*manage content in same line*/
+}
+
+/* edit logo */
+nav .nav_content .logo a {
+  font-size: 30px;
+  font-weight: 500;
+  color: white;
+  margin-left: -200%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+}
+
+/* editing the text of the links */
+nav .nav_content .nav_links {
+  display: flex;
+ 
+  /* align-items: right; */
+  margin-right: -100%;
+}
+
+nav .nav_links li {
+  list-style: none;
+  margin: 0 10px;
+}
+
+nav .nav_links a {
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+  margin-top: 5%;
+  background: url("images/5d85e7e4-466b-4024-bdf0-0f3e2c0caa32.jpg") no-repeat center;
+  background-size: cover;
+  min-height: 100vh;
+  position: relative;
+  /* overflow: hidden; */
+  /* opacity: 50%; */
+}
+
+/* 
+body::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.348);
+} */
+
+/* editing the form container size and position */
+.form-container
+{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   min-height: 100vh;
+}
+  
+/* box within the container colour... */
+.wrapper
+{
+    max-width: 1100px;
+    margin: 0 auto; 
+    padding: 0 1rem;
+   
+    background: rgba(0, 0, 0,0.5);
+    width: 100%;
+    height: 100%;
+    box-shadow: 4px 3px 4px #44a188;
+}
+
+.wrapper h2{
+  font-size: 3rem;
+  color: #fff;
+  /* padding: 2rem 1rem; */
+  padding-left: 5%;
+  position: relative;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* inserts a line under the contact us word */
+.wrapper h2::after{
+  content: "";
+  margin-left: 5%;
+  position: absolute;
+  height: 5px;
+  top: 100px;
+  left: 20px;
+  width:18%;
+  background: rgba(19, 98, 98, 0.705);
+}
+
+.form-section{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 1rem;
+}
+
+
+
+/* edits the text into column under eachother */
+.form-section ul{
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+}
+
+/* inserts the circles around the icons */
+.form-details .icons{
+   background: rgba(19, 98, 98);
+   width: 50px;
+   height: 50px;
+   margin-right: 1rem;
+   border-radius: 50%;
+}
+
+/* wokring with the actual icons */
+.form-details li {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    color: #fff;
+    margin: 0.8rem 0;
+}
+
+/* wokring with the actual icons */
+.form-details li i{
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center; /*puts icons in center of circle*/
+  height: inherit;
+  
+}
+
+/* editing the text above the info */
+.form-details strong{
+    color: rgb(205, 66, 89);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* editing the actual information */
+.form-details p{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.from-group {
+  position: relative;
+}
+
+/* editing the text area box */
+.from-group .form-control{
+   width: 100%;
+   outline: none;
+   border: 1px solid #ddd;
+   padding: 0.8rem;
+   margin: 1rem 0;
+   resize: none;
+   border-radius: 1rem;
+}
+
+/* editing the labels of the form boxes */
+.from-group span{
+  position: absolute;
+  top: 0.8rem;
+  left: 0;
+  padding: 1rem;
+  pointer-events: none;
+  font-size: 0.8rem;
+  color: #ddd;
+  text-transform: uppercase;
+  transition: 0.5s;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* edits the name to light up when hovered over */
+.from-group .form-control:valid ~ span,
+.from-group .form-control:focus ~ span{
+    background: #44a188;
+    color: white;
+    transform: translateX(10px) translateY(-10px);
+    font-size: 0.8rem;
+    padding: 0 10px;
+}
+
+/* editing the button */
+.input-field button{
+   outline: none;
+   border: none;
+   background: #44a188;
+   color: white;
+   padding: 0.5rem 1rem;
+   border-radius: 5px;
+   font-size: 1rem;
+   margin: 1rem 0;
+   cursor: pointer;
+   transition: 0.4s;
+}
+
+.input-field button:active{
+  transform: scale(1.1);
+}
+
+/* making the page responsive, puts info in 1 column if squeezed*/
+@media(max-width: 768px){
+   .form-section{
+    
+    grid-template-columns: 1fr;
+
+   }
+
+   /* editing text when in small screen */
+   .wrapper h2{
+    font-size: 2rem;
+    
+  }
+  
+  /* inserts a line under the contact us word */
+  .wrapper h2::after{
+    content: "";
+    position: absolute;
+    height: 3px;
+    top: 90px;
+  
+  }
+
+  /* wokring with the actual icons */
+.form-details li {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+}
+}
+
+}

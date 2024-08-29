@@ -1,0 +1,53 @@
+.topBanner{
+    background-color: rgb(91, 173, 166);
+    /* padding: 80px 50px; */
+    height: 50vh;
+    width: 100%;
+}
+/* div block styling for message page */
+.messBlock {
+   margin: -12% 20%;
+   display: flex;
+   flex-direction: column;
+   background-color: rgb(23, 137, 127);
+   padding: 80px 50px;
+   border-radius: 20px;
+   /* border: 1px solid black; */
+   box-shadow: 22px 22px 15px rgba(0, 0, 0, 0.2);
+   text-align: center;
+   
+}
+
+.messBlock h1{
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 50px;
+    color: white;
+    margin-top: -5%
+
+}
+
+.messBlock p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 25px;
+    color: white;
+    text-align: center;
+}
+
+.messBlock #welc-back{
+    display: inline-block;
+    background-color: rgb(91, 173, 166);
+    border: 1px solid rgb(75, 150, 143);
+    border-radius: 40px;
+    padding: 20px 60px;
+    cursor: pointer;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.messBlock #welc-back:hover{
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(75, 150, 143);
+    
+}

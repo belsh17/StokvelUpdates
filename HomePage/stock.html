@@ -1,0 +1,731 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,
+     initial-scale=1.0"
+    />
+    <title>Stock | Image</title>
+    <!-- link website for icon to html -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v6.5.2/css/all.css"
+    />
+    <link rel="stylesheet" href="stock.css" />
+     <script src="stock.js" async></script> <!--async tells browser to load script in bg -->
+  </head>
+  <body class="showCart">
+    <div class="wrap">
+      <div id="arrow-left" class="arrow"></div>
+      <div id="slider">
+        <div class="slide slide1">
+          <div class="slide-content">
+            <span>Livestock</span>
+          </div>
+        </div>
+
+        <div class="slide slide2">
+          <div class="slide-content">
+            <span>Feed</span>
+          </div>
+        </div>
+
+        <div class="slide slide3">
+          <div class="slide-content">
+            <span>Grazing</span>
+          </div>
+        </div>
+      </div>
+      <div id="arrow-right" class="arrow"></div>
+
+      <!-- Navigation Bar -->
+      <div class="Navigation">
+        <div class="container" onclick="fun()">
+          <nav>
+            <!-- test for 3 lines -->
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+           
+          </nav>
+        </div>
+        <!-- frame1 -->
+        <div class="frame1" id="frame1">
+          <!-- <ul> -->
+          <!-- <div class="info" ><span>Home</span></div> -->
+          <div class="info">
+            <span
+              ><li><a href="home.html">Home</a></li></span
+            >
+          </div>
+          <div class="info">
+            <span
+              ><li><a href="stock.html">Stock</a></li></span
+            >
+          </div>
+          <ul>
+            <li><a href="cow.html">Cows</a></li>
+          </ul>
+          <ul>
+            <li><a href="chicken.html">Chickens</a></li>
+          </ul>
+          <ul>
+            <li><a href="goat.html">Goats</a></li>
+          </ul>
+          <ul>
+            <li><a href="pig.html">Pigs</a></li>
+          </ul>
+          <ul>
+            <li><a href="sheep.html">Sheep</a></li>
+          </ul>
+          <ul>
+            <li><a href="feed.html">Feed</a></li>
+          </ul>
+          <div class="info">
+            <span
+              ><li><a href="cart.html.html">Cart</a></li></span
+            >
+          </div>
+          <div class="info">
+            <span
+              ><li><a href="contact.html">Contact Us</a></li></span
+            >
+          </div>
+          <div class="info" onclick="remove()"><span>Exit</span></div>
+        </div>
+      </div>
+    </div>
+
+     <!-- navigation bar -->
+     <section>
+      <nav>
+       <div class="nav_content">
+         <div class="logo">
+           <a href="#">Online Livestock</a>
+         </div>
+         <ul class="nav_links">
+           <li><a href="home.html">Home</a></li>
+           <li><a href="aboutUs.html">About Us</a></li>
+           <li><a href="stock.html">Stock</a></li>
+           <li><a href="checkout.html">Cart</a></li>
+           <li><a href="contact.html">Contact Us</a></li>
+           <li><a href="signup.html">Sign Up</a></li>
+           <li><a href="login.html">Login</a></li>
+           <div class="trailer">
+            <i class="fa-solid fa-trailer"></i> <!-- Font Awesome cart icon -->
+            <span id="cart-count" class="hidden">0</span>
+           </div>
+           
+         </ul>
+       </div>
+      </nav>
+     </section>
+
+
+    <script>
+      let sliderImages =
+          document.querySelectorAll(".slide") /*return html collection*/,
+        arrowLeft =
+          document.querySelector(
+            "#arrow-left"
+          ) /*querySelector not all cause only 1*/,
+        arrowRight = document.querySelector("#arrow-right"),
+        current = 0; /*represents the slide we are on*/
+
+      function reset() {
+        /*each time change slide we want to clear all images*/
+        for (let i = 0; i < sliderImages.length; i++) {
+          sliderImages[i].style.display = "none";
+        }
+      }
+
+      //initializes the slider
+      function startSlide() {
+        reset();
+        sliderImages[0].style.display = "block";
+      }
+
+      //show previous
+      function slideLeft() {
+        reset();
+        sliderImages[current - 1].style.display = "block";
+        current--;
+      }
+
+      //show next
+      function slideRight() {
+        reset();
+        sliderImages[current + 1].style.display = "block";
+        current++;
+      }
+
+      //left arrow click
+      arrowLeft.addEventListener("click", function () {
+        //onvce its clicked it calls the following function
+        if (current == 0) {
+          //0 is the first image
+          current = sliderImages.length; //therefore if we click back button it must go to the last image and last image is the max length
+        }
+        slideLeft();
+      });
+
+      //right arrow click
+      arrowRight.addEventListener("click", function () {
+        //onvce its clicked it calls the following function
+        if (current == sliderImages.length - 1) {
+          //1 less than last image
+          current = -1; //therefore if we click next button it must go to the second image and last image is the max length
+        }
+        slideRight();
+      });
+
+      startSlide();
+    </script>
+
+    <!-- add banner for stock types to choose -->
+    <section id="animalType" class="topHeader">
+      <!-- container holding all animal types -->
+      <div class="typeContainer">
+        <!-- each individualtype container -->
+      <div class="eaType">
+        <a href="pig.html"
+            ><img class="stockImage" src="images/IMG_3751.jpeg" alt="CANNOT show"
+          /></a>
+        <h3>Our Pigs</h3>
+        <h5>Weight Range: 60kg-120kgs</h5>
+        <span
+          >Landrace, large white and f1s (duroc boar) readily available for both slaughter and breeding. Kolbroek pigs and bush pigs available on request.</span>
+       </div>
+
+         <!-- each individualtype container -->
+      <div class="eaType">
+        <a href="cow.html"
+            ><img class="stockImage" src="images/IMG_0061.jpeg" alt="CANNOT SHOW"
+          /></a>
+        <h3>Our Cattle</h3>
+        <h5>Weight Range: 60kg-120kgs</h5>
+        <span
+          >Meat breeds such as bonsmara, brahman, beefmaster and Nguni ranging from A-grade to C-grade will be available in a variety of colors to meet every client’s needs. Transport, slaughter, cutting & packaging and cold storage options will be available</span
+        >
+       </div>
+
+         <!-- each individualtype container -->
+      <div class="eaType">
+        <a href="sheep.html"
+            ><img class="stockImage" src="images/IMG_0263.jpeg" alt="CANNOT SHOW"
+          /></a>
+        <h3>Our Sheep</h3>
+        <h5>Weight Range: 60kg-120kgs</h5>
+        <span
+          >A variety of meat master, merino, dorper and dormer ranging from lamb to mutton will be available. Pregnant ewes and breeding rams available on request.</span
+        >
+       </div>
+
+         <!-- each individualtype container -->
+      <div class="eaType">
+        <a href="goat.html"
+            ><img class="stockImage" src="images/a429c87e-d593-43c2-81e4-86ad2d364c40.jpg" alt="CANNOT SHOW"
+          /></a>
+        <h3>Our Goats</h3>
+        <h5>Weight Range: 60kg-120kgs</h5>
+        <span
+          >Providing all 3 of the major meat breeds (Boerbok, Kalahari Red and Savannah) as well as indigenous goats for slaughter to accommodate all of our client’s colour requirements. Kapaters/whethers, rams and mature ewes. Breeding Boerbok ewes and rams available on request.</span
+        >
+       </div>
+
+         <!-- each individualtype container -->
+      <div class="eaType">
+        <a href="chicken.html"
+            ><img
+              class="stockImage"
+              src="images/0864f3f1-1d5a-4c53-a3b9-398b4deffecb.jpg"
+              alt="CANNOT SHOW"
+          /></a>
+        <h3>Our Chickens</h3>
+        <h5>Weight Range: 60kg-120kgs</h5>
+        <span
+          >Broiler (ross 308) and a of variety layers and off-layers/hard bodies will be available. Day old broilers available on order.</span
+        >
+       </div>
+
+         <!-- each individualtype container -->
+      <div class="eaType">
+        <a href="feed.html"
+            ><img class="stockImage" src="images/feed.jpg" alt="CANNOT SHOW"
+          /></a>
+        <h3>Feed for sale</h3>
+        <h5>Weight Range: 60kg-120kgs</h5>
+        <span
+          >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia
+          reiciendis a perferendis! Libero ut eum ea nesciunt sapiente fuga
+          ipsam voluptatum, necessitatibus exercitationem cum nisi deleniti,
+          rerum laborum animi saepe.</span
+        >
+       </div>
+      </div>
+    </section>
+
+    <!-- Section for featured stock -->
+    <section id="product1" class="section-p2">
+      <!-- heading of the products -->
+      <h2>Featured Livestock</h2>
+      <p>See all of our featured livestock and recently added</p>
+      <!-- box/container holding all the products  -->
+      <div class="prod-container">
+        <!-- each individual container for product -->
+        <div class="pro">
+          <img src="images/IMG_0542.jpeg" alt="IMAGE NOT AVAILABLE" />
+          <!-- description box for each product -->
+          <div class="des">
+            <!-- animaltype description -->
+            <span>Lukas Burger</span>
+            <h5>Byson Bull Mt5</h5>
+            <h4>R400</h4>
+          </div>
+          <!-- shopping cart icon -->
+          <a href="cart.html"
+            ><i class="fa-solid fa-trailer fa-bounce trailer"></i
+          ></a>
+          <!-- <i class="fa-solid fa-crosshairs"></i> -->
+        </div>
+
+        <!-- each individual container for product -->
+        <div class="pro">
+          <img src="images/IMG_0542.jpeg" alt="IMAGE NOT AVAILABLE" />
+          <!-- description box for each product -->
+          <div class="des">
+            <!-- animaltype description -->
+            <span>Lukas Burger</span>
+            <h5>Byson Bull Mt5</h5>
+            <h4>R400</h4>
+          </div>
+          <!-- shopping cart icon -->
+          <a href="cart.html"
+            ><i class="fa-solid fa-trailer fa-bounce trailer"></i
+          ></a>
+          <!-- <i class="fa-solid fa-crosshairs"></i> -->
+        </div>
+
+        <!-- each individual container for product -->
+        <div class="pro">
+          <img src="images/IMG_0542.jpeg" alt="IMAGE NOT AVAILABLE" />
+          <!-- description box for each product -->
+          <div class="des">
+            <!-- animaltype description -->
+            <span>Lukas Burger</span>
+            <h5>Byson Bull Mt5</h5>
+            <h4>R400</h4>
+          </div>
+          <!-- shopping cart icon -->
+          <a href="cart.html"
+            ><i class="fa-solid fa-trailer fa-bounce trailer"></i
+          ></a>
+          <!-- <i class="fa-solid fa-crosshairs"></i> -->
+        </div>
+
+        <!-- each individual container for product -->
+        <div class="pro">
+          <img src="images/IMG_0540.jpeg" alt="IMAGE NOT AVAILABLE" />
+          <!-- description box for each product -->
+          <div class="des">
+            <!-- animaltype description -->
+            <span>Lukas Burger</span>
+            <h5>Byson Bull Mt5</h5>
+            <h4>R400</h4>
+          </div>
+          <!-- shopping cart icon -->
+          <a href="cart.html"
+            ><i class="fa-solid fa-trailer fa-bounce trailer"></i
+          ></a>
+          <!-- <i class="fa-solid fa-crosshairs"></i> -->
+        </div>
+
+        <!-- each individual container for product -->
+        <div class="pro">
+          <img src="images/IMG_4937.jpeg" alt="IMAGE NOT AVAILABLE" />
+          <!-- description box for each product -->
+          <div class="des">
+            <!-- animaltype description -->
+            <span>Lukas Burger</span>
+            <h5>Byson Bull Mt5</h5>
+            <h4>R400</h4>
+          </div>
+          <!-- shopping cart icon -->
+          <a href="cart.html"
+            ><i class="fa-solid fa-trailer fa-bounce trailer"></i
+          ></a>
+          <!-- <i class="fa-solid fa-crosshairs"></i> -->
+        </div>
+
+        <!-- each individual container for product -->
+        <div class="pro">
+          <img src="images/feed.jpg" alt="IMAGE NOT AVAILABLE" />
+          <!-- description box for each product -->
+          <div class="des">
+            <!-- animaltype description -->
+            <span>Lukas Burger</span>
+            <h5>Byson Bull Mt5</h5>
+            <h4>R400</h4>
+          </div>
+          <!-- shopping cart icon -->
+          <a href="cart.html"
+            ><i class="fa-solid fa-trailer fa-bounce trailer"></i
+          ></a>
+          <!-- <i class="fa-solid fa-crosshairs"></i> -->
+        </div>
+
+        <!-- each individual container for product -->
+        <div class="pro">
+          <img src="images/IMG_0542.jpeg" alt="IMAGE NOT AVAILABLE" />
+          <!-- description box for each product -->
+          <div class="des">
+            <!-- animaltype description -->
+            <span>Lukas Burger</span>
+            <h5>Byson Bull Mt5</h5>
+            <h4>R400</h4>
+          </div>
+          <!-- shopping cart icon -->
+          <a href="cart.html"
+            ><i class="fa-solid fa-trailer fa-bounce trailer"></i
+          ></a>
+          <!-- <i class="fa-solid fa-crosshairs"></i> -->
+        </div>
+
+        <!-- each individual container for product -->
+        <div class="pro">
+          <img
+            src="images/c7e0b19c-a9b4-41cb-bf77-546840845d1f.jpeg"
+            alt="IMAGE NOT AVAILABLE"
+          />
+          <!-- description box for each product -->
+          <div class="des">
+            <!-- animaltype description -->
+            <span>Lukas Burger</span>
+            <h5>Byson Bull Mt5</h5>
+            <h4>R400</h4>
+          </div>
+          <!-- shopping cart icon -->
+          <a href="cart.html"
+            ><i class="fa-solid fa-trailer fa-bounce trailer"></i
+          ></a>
+          <!-- <i class="fa-solid fa-crosshairs"></i> -->
+        </div>
+
+        <!-- each individual container for product -->
+        <div class="pro">
+          <img src="images/MatGoats.jpeg" alt="IMAGE NOT AVAILABLE" />
+          <!-- description box for each product -->
+          <div class="des">
+            <!-- animaltype description -->
+            <span>Lukas Burger</span>
+            <h5>Byson Bull Mt5</h5>
+            <h4>R400</h4>
+          </div>
+          <!-- shopping cart icon -->
+          <a href="cart.html"
+            ><i class="fa-solid fa-trailer fa-bounce trailer"></i
+          ></a>
+          <!-- <i class="fa-solid fa-crosshairs"></i> -->
+        </div>
+      </div>
+    </section>
+
+    <!-- section for action/mid banner -->
+    <section id="banner" class="section-m1">
+      <h4>Our Feed</h4>
+      <h2>Up to <span>30% off</span> on all the feed we have to offer</h2>
+      <button class="normal">Explore More</button>
+    </section>
+
+    <!-- section for all stock -->
+    <section id="product1" class="section-p2">
+      <!-- heading of the products -->
+      <h2>New in Livestock</h2>
+      <p>See all of our livestock that we have to offer</p>
+      <!-- box/container holding all the products start of list -->
+      <!-- <div class="prod-container"> -->
+      <div class="prod-container2">
+
+        <!-- each individual container for product -->
+        <!-- <div class="pro">
+          <img src="images/IMG_0542.jpeg" alt="IMAGE NOT AVAILABLE" />
+          
+          <div class="des">
+            
+            <span>Lukas Burger</span>
+            <h5>Boer Goat</h5>
+            <h4>R100</h4>
+          </div>
+          <button class="add-to-cart" data-product-id="1" data-quantity ="1">Add to cart</button>
+          
+          <a href="cart.html"
+            ><i class="fa-solid fa-trailer fa-bounce trailer"></i
+          ></a>
+          
+        </div>
+
+        
+        <div class="pro">
+          <img src="images/IMG_0542.jpeg" alt="IMAGE NOT AVAILABLE" />
+          
+          <div class="des">
+            
+            <span>Lukas Burger</span>
+            <h5>Angora Goat</h5>
+            <h4>R200</h4>
+          </div>
+          <button class="add-to-cart" data-product-id="2" data-quantity ="1">Add to cart</button>
+          
+          <a href="cart.html"
+            ><i class="fa-solid fa-trailer fa-bounce trailer"></i
+          ></a>
+          
+        </div>
+
+        
+        <div class="pro">
+          <img src="images/IMG_0542.jpeg" alt="IMAGE NOT AVAILABLE" />
+          
+          <div class="des">
+            
+            <span>Lukas Burger</span>
+            <h5>Alpine Goat</h5>
+            <h4>R300</h4>
+          </div>
+          <button class="add-to-cart" data-product-id="3" data-quantity ="1">Add to cart</button>
+          
+          <a href="cart.html"
+            ><i class="fa-solid fa-trailer fa-bounce trailer"></i
+          ></a>
+          
+        </div>
+
+        
+        <div class="pro">
+          <img src="images/IMG_0540.jpeg" alt="IMAGE NOT AVAILABLE" />
+          
+          <div class="des">
+            
+            <span>Lukas Burger</span>
+            <h5>Jamnapari Goat</h5>
+            <h4>R400</h4>
+          </div>
+          <button class="add-to-cart" data-product-id="4" data-quantity ="1">Add to cart</button>
+          
+          <a href="cart.html"
+            ><i class="fa-solid fa-trailer fa-bounce trailer"></i
+          ></a>
+          
+        </div>
+
+      
+        <div class="pro">
+          <img src="images/IMG_4937.jpeg" alt="IMAGE NOT AVAILABLE" />
+          
+          <div class="des">
+            
+            <span>Lukas Burger</span>
+            <h5>Donkey</h5>
+            <h4>R500</h4>
+          </div>
+          <button class="add-to-cart" data-product-id="5" data-quantity ="1">Add to cart</button>
+          
+          <a href="cart.html"
+            ><i class="fa-solid fa-trailer fa-bounce trailer"></i
+          ></a>
+          
+        </div>
+
+        
+        <div class="pro">
+          <img src="images/feed.jpg" alt="IMAGE NOT AVAILABLE" />
+          
+          <div class="des">
+            
+            <span>Lukas Burger</span>
+            <h5>Haystack</h5>
+            <h4>R400</h4>
+          </div>
+          <button class="add-to-cart" data-product-id="6" data-quantity ="1">Add to cart</button>
+          
+          <a href="cart.html"
+            ><i class="fa-solid fa-trailer fa-bounce trailer"></i
+          ></a>
+          
+        </div>
+
+        
+        <div class="pro">
+          <img src="images/IMG_0542.jpeg" alt="IMAGE NOT AVAILABLE" />
+          
+          <div class="des">
+            
+            <span>Lukas Burger</span>
+            <h5>Boer Goat</h5>
+            <h4>R300</h4>
+          </div>
+          <button class="add-to-cart" data-product-id="7" data-quantity ="1">Add to cart</button>
+         
+          <a href="cart.html"
+            ><i class="fa-solid fa-trailer fa-bounce trailer"></i
+          ></a>
+          
+        </div>
+
+        
+        <div class="pro">
+          <img
+            src="images/c7e0b19c-a9b4-41cb-bf77-546840845d1f.jpeg"
+            alt="IMAGE NOT AVAILABLE"
+          />
+          
+          <div class="des">
+            
+            <span>Lukas Burger</span>
+            <h5>Peppa Pig</h5>
+            <h4>R200</h4>
+          </div>
+          <button class="add-to-cart" data-product-id="8" data-quantity ="1">Add to cart</button>
+          
+          <a href="cart.html"
+            ><i class="fa-solid fa-trailer fa-bounce trailer"></i
+          ></a>
+          
+        </div>
+
+        
+        <div class="pro">
+          <img src="images/MatGoats.jpeg" alt="IMAGE NOT AVAILABLE" />
+         
+          <div class="des">
+            
+            <span>Lukas Burger</span>
+            <h5>Dwarf Goat</h5>
+            <h4>R100</h4>
+          </div>
+          <button class="add-to-cart" data-product-id="9" data-quantity ="1">Add to cart</button>
+        
+          <a href="cart.html"
+            ><i class="fa-solid fa-trailer fa-bounce trailer"></i
+          ></a>
+          
+        </div> -->
+      </div>
+
+ <!-- cart section from blackbox -->
+    <div class="cart">
+      <h2 id="cartHead">Cart</h2>
+      <ul id = "cart-list">
+        <!-- cart items are displayed here -->
+      </ul>
+      <p id="cart-total">Total: R0.00</p>
+      <button id="checkout">Checkout</button>
+    </div>
+<!-- end of blackbox code -->
+
+    </section>
+
+    <!-- different promos and blocks first row -->
+    <section id="sm-banner" class="section-p2">
+      <!-- create first block -->
+      <div class="banner-box">
+        <h4>Our deals</h4>
+        <h2>Buy 2 get feed free</h2>
+        <span>Our best quality feed is on sale</span>
+        <button class="white">Learn More</button>
+      </div>
+
+      <!-- create second block -->
+      <div class="banner-box banner-box2">
+        <h4>Crazy Special</h4>
+        <h2>Buy our feed!!</h2>
+        <span>Our best quality feed is on sale</span>
+        <button class="white">Learn More</button>
+      </div>
+    </section>
+
+    <!-- diferent promo blocks second row -->
+    <section id="banner3">
+      <!-- create first block -->
+      <div class="banner-box">
+        <h2>SEASONAL SALE</h2>
+        <h3>Sheep feed - 50% OFF</h3>
+      </div>
+      <!-- create second block -->
+      <div class="banner-box banner-box2">
+        <h2>SEASONAL SALE</h2>
+        <h3>Sheep feed - 50% OFF</h3>
+      </div>
+      <!-- create third block -->
+      <div class="banner-box banner-box3">
+        <h2>SEASONAL SALE</h2>
+        <h3>Sheep feed - 50% OFF</h3>
+      </div>
+    </section>
+
+    <!-- footer for contact us -->
+   <footer class="section-p1">
+
+    <!-- first coloumn in footer  -->
+    <div class="column">
+       <!-- <img class="logo" src="images/LogoMU-removebg-preview.png" alt="Cannot display"> -->
+       <h4>Contact:</h4>
+       <p><strong>Address:</strong>Plot 37,
+        Adcock Street (Impala Road),
+        Vlakfontein,Tshepisong,Soweto</p>
+        <p><strong>Phone:</strong> 010 825 5590</p>
+        <p><strong>Hours:</strong>10:00 - 18:00, Mon-Sat</p>
+        <!-- follow us icons -->
+        <div class="follow"> 
+           <h4>Follow us</h4>
+           <div class="icon">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+           </div>
+        </div>
+      </div>
+
+      <!-- second coloumn in footer -->
+      <div class="column">
+          <h4>About</h4>
+          <!-- anchor tag to lead to a link when word is pressed -->
+          <a href="aboutUs.html">About Us</a> 
+          <a href="#">Delivery Information</a> 
+          <a href="#">Privacy Policy</a> 
+          <a href="#">Terms & Conditions</a> 
+          <a href="contact.html">Contact us</a> 
+      </div>
+
+      <!-- third coloumn in footer -->
+      <div class="column">
+        <h4>My Account</h4>
+        <!-- anchor tag to lead to a link when word is pressed -->
+        <a href="#">Sign In</a> 
+        <a href="cart.html">View Cart</a> 
+        <a href="#">Help</a> 
+       
+    </div>
+
+    <!-- fourth coloumn in footer -->
+    <div class="column install">
+      <h4>Install App</h4>
+      <p>From app store or google play</p>
+      
+      <p>Secure payment gateways</p>
+    </div>
+
+  <!-- bottom copyright text -->
+    <div class="copyright">
+      <p><i class="fa-regular fa-copyright"></i> 2024, Isabella - Stokvel HTML</p>
+    </div>
+ </footer>
+
+
+    </div>
+    <script src="stock.js"></script>
+  </body>
+</html>
+
+<!-- style="height: 35%; width: 50%; margin-top: 10%" -->
+<!-- style="margin-top: 10%; position: center" -->

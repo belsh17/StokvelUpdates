@@ -1,0 +1,49 @@
+<!-- !tab -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <!-- link website for icon to html -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v6.5.2/css/all.css"
+    />
+    <link rel="stylesheet" href="checkout.css" />
+     <script src="checkout.js" async></script> <!--async tells browser to load script in bg -->
+     <script src="stock.js" async></script> <!--async tells browser to load script in bg -->
+</head>
+<body>
+    <section>
+        <nav>
+         <div class="nav_content">
+           <div class="logo">
+             <a href="#">Online Livestock</a>
+           </div>
+           <ul class="nav_links">
+             <li><a href="home.html">Home</a></li>
+             <li><a href="aboutUs.html">About Us</a></li>
+             <li><a href="stock.html">Stock</a></li>
+             <li><a href="checkout.html">Cart</a></li>
+             <li><a href="contact.html">Contact Us</a></li>
+             <li><a href="signup.html">Sign Up</a></li>
+            <li><a href="login.html">Login</a></li>
+  
+           </ul>
+         </div>
+        </nav>
+       </section>
+
+    <section class="checkoutBox">
+       <h1>Checkout</h1>
+       <ul id="checkout-cart-list"></ul>
+       <div id="checkout-cart-total"></div>
+       <button id="clear-cart">Complete purchase</button>
+       <p>Missing something? Keep shopping!!</p>
+       <button id="back-stock">Back to stock</button>
+       <script src="checkout.js"></script>
+    </section>
+  
+</body>
+</html>

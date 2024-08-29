@@ -1,0 +1,59 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="login.js"></script>
+</head>
+<body>
+
+<!-- navigation bar -->
+    <section>
+        <nav>
+          <div class="nav_content">
+            <div class="logo">
+              <a href="#">Online Livestock</a>
+            </div>
+            <ul class="nav_links">
+              <li><a href="home.html">Home</a></li>
+              <li><a href="aboutUs.html">About Us</a></li>
+              <li><a href="stock.html">Stock</a></li>
+              <li><a href="checkout.html">Cart</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="signup.html">Sign Up</a></li>
+              <li><a href="login.html">Login</a></li>
+            </ul>
+          </div>
+        </nav>
+      </section>
+
+<!-- section for login details for account -->
+<section>
+   <div class="loginSec">
+
+    <h1>Sign into your account</h1>
+    <center>
+      <form id ="login-form" action="/login" method="POST">
+         
+         <p>Enter registered email address</p>
+         <input type="email" name="email" id="login-email" placeholder="Email" required style="width: 280px; height: 50px; margin-bottom: 2%; font-size: 15px;"><br>
+         <input type="password" name="password" id="login-password" placeholder="Password" required style="width: 280px; height: 50px; margin-bottom: 2%; font-size: 15px;"><br>
+        
+         <!-- <input type="email" style="width: 280px; height: 50px; margin-bottom: 5%; font-size: 15px;"><br>-->
+         <button type="submit">Continue</button> 
+      </form>
+    </center>
+
+    <center>
+      <div class="loginFoot">
+        <p>Don't have an account?</p>
+        <a href="signup.html"><button class="createBt">Create an account</button></a>
+      </div>
+    </center>
+
+   </div>
+</section>
+
+</body>
+</html>

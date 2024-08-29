@@ -1,0 +1,172 @@
+/* removes underline */
+a {
+    text-decoration: none;
+  }
+
+/*navigation banner  */
+nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background: rgb(19, 98, 98);
+  /* padding: 20px; */
+}
+
+/* edit content in navigation banner */
+nav .nav_content {
+  height: 100%;
+  max-width: 440px;
+  /* margin-left: 20px; */
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /*manage content in same line*/
+}
+
+/* edit logo */
+nav .nav_content .logo a {
+  font-size: 30px;
+  font-weight: 500;
+  color: white;
+  margin-left: -200%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* editing the text of the links */
+nav .nav_content .nav_links {
+  display: flex;
+
+  /* align-items: right; */
+  margin-right: -100%;
+}
+
+nav .nav_links li {
+  list-style: none;
+  margin: 0 10px;
+}
+
+nav .nav_links a {
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* General Styling for the Payment Page */
+body {
+    font-family: Arial, sans-serif;
+    /* background-color: #f4f4f4; */
+    background: url('images/background.jpg') no-repeat center center fixed; 
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    margin-top: 70px;
+}
+
+.payment {
+    
+    text-align: center;
+    margin: 20px;
+}
+
+.payment h1 {
+    font-size: 2.5em;
+    color: white;
+    margin-bottom: 20px;
+}
+
+#payment-details {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    /* box-shadow: rgb(19, 98, 98) 0 7px 29px 0; */
+    box-shadow: rgb(0, 0, 0) 0 7px 29px 0;
+}
+
+#payment-details h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: rgb(19, 98, 98);
+}
+
+#payment-cart-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#payment-cart-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#payment-cart-list span {
+    font-size: 1em;
+    color: #555;
+}
+
+#payment-cart-total {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: right;
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#payment-form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: rgb(19, 98, 98) 0 7px 29px 0;
+}
+
+#payment-form:hover{
+    transform: scale(1.02);
+}
+
+#payment-form h3 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: rgb(19, 98, 98);
+}
+
+#payment-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#payment-form input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+#payment-form button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #186f65;
+    color: #fff;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#payment-form button:hover {
+    background-color: #3bafa2;
+}

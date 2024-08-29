@@ -1,0 +1,135 @@
+/* removes underline */
+a {
+    text-decoration: none;
+  }
+
+/*navigation banner  */
+nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background: rgb(19, 98, 98);
+   z-index: 1; /*stops the overlapping of nav bar */
+  /* padding: 20px; */
+}
+
+/* edit content in navigation banner */
+nav .nav_content {
+  height: 100%;
+  max-width: 440px;
+  /* margin-left: 20px; */
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /*manage content in same line*/
+}
+
+/* edit logo */
+nav .nav_content .logo a {
+  font-size: 30px;
+  font-weight: 500;
+  color: white;
+  margin-left: -200%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* editing the text of the links */
+nav .nav_content .nav_links {
+  display: flex;
+
+  /* align-items: right; */
+  margin-right: -100%;
+}
+
+nav .nav_links li {
+  list-style: none;
+  margin: 0 10px;
+}
+
+nav .nav_links a {
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+/* editing the container for login */
+.loginSec{
+  margin-top: 10%;
+ 
+}
+
+/* editing the actual login container */
+/* .loginHead{
+  /* display: flex; 
+} */
+
+/* editing the header content */
+.loginSec h1{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 30px;
+  color: rgb(19, 98, 98);
+  text-align: center;
+}
+
+/* editing the header content */
+#login-form p{
+  padding-top: 3%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 15px;
+  color: black;
+}
+
+/* editing the footer buttons */
+#login-form .continueBt{
+  background-color: rgb(255, 255, 255);
+  color: rgb(19, 98, 98);
+  border: 1px solid rgb(19, 98, 98);
+  width: 280px;
+  height: 40px;
+  border-radius: 20px;
+  font-size: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  cursor: pointer;
+}
+
+/* hover over button feature */
+#login-form .continueBt:hover{
+  background-color: rgb(19, 98, 98);
+  color: white;
+
+}
+
+/* editing the footer content */
+.loginFoot p{
+  /* border-top: 1px solid rgba(0, 0, 0, 0.225); */
+  padding-top: 0;
+  padding-bottom: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 15px;
+  color: black;
+}
+
+/* editing the footer buttons */
+/* editing the footer buttons */
+.loginFoot .createBt{
+  background-color: rgb(19, 98, 98);
+  color: white;
+  border: 1px solid rgb(19, 98, 98);
+  width: 280px;
+  height: 40px;
+  border-radius: 20px;
+  font-size: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  cursor: pointer;
+}
+
+/* hover over button feature */
+.loginFoot .createBt:hover{
+  background-color: rgb(142, 184, 184);
+    color: rgb(19, 98, 98);
+}
+
+

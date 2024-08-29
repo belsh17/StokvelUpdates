@@ -1,0 +1,356 @@
+/* *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+} */
+
+.wrap {
+  position: relative;
+  border: 6px solid white;
+}
+
+/* removes underline */
+a {
+  text-decoration: none;
+}
+/* 
+navigation banner  */
+nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background: rgb(19, 98, 98);
+  /* padding: 20px; */
+}
+
+/* edit content in navigation banner */
+nav .nav_content {
+  height: 100%;
+  max-width: 440px;
+  /* margin-left: 20px; */
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /*manage content in same line*/
+}
+
+/* edit logo */
+nav .nav_content .logo a {
+  font-size: 30px;
+  font-weight: 500;
+  color: white;
+  margin-left: -200%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* editing the text of the links */
+nav .nav_content .nav_links {
+  display: flex;
+
+  /* align-items: right; */
+  margin-right: -100%;
+}
+
+nav .nav_links li {
+  list-style: none;
+  margin: 0 10px;
+}
+
+nav .nav_links a {
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* edit the picture on top */
+.background {
+  background-image: url("images/IMG_0540.jpeg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh; /*takes height of the view port height*/
+  /* opacity: 90%; */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 3%;
+}
+
+/* edit the welcome text */
+#headerPic span {
+  font-size: 70px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif,
+    Courier, monospace, "Arial Narrow", Arial, sans-serif;
+  color: white;
+}
+
+/* edit the container holding the pic and text */
+#aboutUs .tpContainer {
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 60px;
+  margin-bottom: 40px;
+  /* background-color: rgb(102, 124, 124); */
+  display: flex;
+  justify-content: space-between;
+  padding-left: 5%;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  padding-right: 5%;
+}
+
+/* editing the picture in the div */
+#aboutUs .captionPic img {
+  width: 100%;
+  height: 90%;
+  box-shadow: 40px 40px 10px rgba(19, 98, 98, 0.734);
+  /* border: 10px solid rgb(19, 98, 98); */
+}
+
+/* edit the about us text */
+#aboutUs .tpContainer .aboutText {
+  padding-left: 10%;
+  padding-top: 5%;
+}
+
+/* edit the about us heading */
+#aboutUs .tpContainer .aboutText h3 {
+  color: rgb(19, 98, 98);
+  font-size: 40px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* edit the about us paragraph */
+#aboutUs .tpContainer .aboutText span {
+  /* color: rgb(19, 98, 98); */
+  font-size: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* edit the about us paragraph */
+#aboutUs .tpContainer .aboutText span {
+  /* color: rgb(19, 98, 98); */
+  font-size: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* edit the about us button */
+#aboutUs button {
+  /* color: rgb(19, 98, 98); */
+  padding-top: 10px;
+  padding-bottom: 15px;
+  padding-right: 30px;
+  padding-left: 30px;
+  font-size: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 10px;
+  /* margin-bottom: 50px; */
+  margin-top: 50px;
+}
+
+#aboutUs button:hover {
+  background: rgb(19, 98, 98);
+  color: #fff;
+}
+
+/* editing the fixed pic */
+#fixedPic .frameFP {
+  width: 100%;
+  height: 500px;
+  background-position: center;
+  background-size: cover;
+  background-image: url("images/cfa6a777-866b-46d0-a0cf-9caa9473f82c.jpg");
+  background-attachment: fixed;
+
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+}
+
+/* edit the container holding the pic and text */
+#services .tpContainer {
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 60px;
+  margin-bottom: 40px;
+  /* background-color: rgb(102, 124, 124); */
+  display: flex;
+  /* flex-wrap: wrap; add to make it responsive*/
+  justify-content: space-between;
+  padding-left: 5%;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  padding-right: 5%;
+}
+
+/* editing the picture in the div */
+#services .servicesPic img {
+  width: 100%;
+  height: 90%;
+  box-shadow: 40px 40px 10px rgba(19, 98, 98, 0.734);
+  /* border: 10px solid rgb(19, 98, 98); */
+}
+
+/* edit the about us text */
+#services .tpContainer .servicesText {
+  padding-right: 10%;
+  padding-top: 5%;
+}
+
+/* edit the about us heading */
+#services .tpContainer .servicesText h3 {
+  color: rgb(19, 98, 98);
+  font-size: 40px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* edit the about us paragraph */
+#services .tpContainer .servicesText span {
+  /* color: rgb(19, 98, 98); */
+  font-size: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* edit the about us paragraph */
+#services .tpContainer .servicesText span {
+  /* color: rgb(19, 98, 98); */
+  font-size: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* edit the about us button */
+#services button {
+  /* color: rgb(19, 98, 98); */
+  padding-top: 10px;
+  padding-bottom: 15px;
+  padding-right: 30px;
+  padding-left: 30px;
+  font-size: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 10px;
+  /* margin-bottom: 50px; */
+  margin-top: 50px;
+}
+
+#services button:hover {
+  background: rgb(19, 98, 98);
+  color: #fff;
+}
+
+/* edit the photos slideshow 
+#slideshow .sliderframe{
+   overflow: hidden;
+   height: 800px;
+   width: 1200px;
+   margin-left: 360px;
+   margin-top: 20px;
+}
+
+slide animation
+@-webkit-keyframes slide_animations{
+  0% {left: 0px;}
+  10% {left: 0px;}
+  20% {left: 1200px;}
+  30% {left: 1200px;}
+  40% {left: 2400px;}
+  50% {left: 2400px;}
+  60% {left: 1200px;}
+  70% {left: 1200px;}
+  80% {left: 0px;}
+  90% {left: 0px;}
+  100% {left: 0px;}
+}
+
+#slideshow .slide-images{
+  width: 3600px;
+  height: 800px;
+  margin: 0 0 0 -2400px;
+  position: relative;
+  -webkit-animation-name: slide_animation;
+  -webkit-animation-duration: 33s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-play-state: running;
+}
+
+.img-container{
+  height: 800px;
+  width: 1200px;
+  position: relative;
+  float: left;
+} */
+
+/* makes the footer responsive */
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: rgba(19, 98, 98, 0.645);
+  padding-left: 8px;
+  padding-right: 8px;
+  /* background-image: url("images/IMG_0542.jpeg"); */
+}
+
+/* puts the text in right format */
+footer .column {
+  display: flex;
+  flex-direction: column; /*puts the text in a column under ea. other*/
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+/* footer .logo{
+    margin-bottom: 30px;
+    width: 40px;
+    height: 40px;
+} */
+
+footer h4 {
+  font-size: 20px;
+  padding-bottom: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(19, 98, 98);
+}
+
+footer p {
+  font-size: 16px;
+  margin: 0 0 8px 0; /*top right bottom left*/
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+}
+
+footer a {
+  font-size: 16px;
+  color: #222;
+  margin-bottom: 10px; /*top right bottom left*/
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+}
+
+footer .follow {
+  margin-top: 20px;
+}
+
+footer .follow i {
+  color: white;
+  cursor: pointer;
+  padding-right: 4px;
+}
+
+footer i:hover,
+footer a:hover {
+  color: #088178;
+}
+
+footer .copyright {
+  width: 100%;
+  text-align: center;
+}

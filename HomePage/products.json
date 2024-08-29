@@ -1,0 +1,11 @@
+[
+    { "id": 1, "name": "Byson Bull Mt5", "price": 100.00, "image": "images/IMG_0542.jpeg", "animalType": "Lukas Burger" },
+    { "id": 2, "name": "Byson Bull Mt5", "price": 200.00,"image": "images/IMG_0542.jpeg", "animalType": "Lukas Burger" },
+    { "id": 3, "name": "Byson Bull Mt5", "price": 300.00, "image": "images/IMG_0542.jpeg", "animalType": "Lukas Burger" },
+    { "id": 4, "name": "Byson Bull Mt5", "price": 400.00, "image": "images/IMG_0540.jpeg", "animalType": "Lukas Burger" },
+    { "id": 5, "name": "Byson Bull Mt5", "price": 500.00, "image": "images/IMG_4937.jpeg", "animalType": "Lukas Burger" },
+    { "id": 6, "name": "Byson Bull Mt5", "price": 400.00, "image": "images/feed.jpg", "animalType": "Lukas Burger" },
+    { "id": 7, "name": "Byson Bull Mt5", "price": 300.00, "image": "images/IMG_0542.jpeg", "animalType": "Lukas Burger" },
+    { "id": 8, "name": "Byson Bull Mt5", "price": 200.00, "image": "images/c7e0b19c-a9b4-41cb-bf77-546840845d1f.jpeg", "animalType": "Lukas Burger" },
+    { "id": 9, "name": "Byson Bull Mt5", "price": 100.00, "image": "images/MatGoats.jpeg", "animalType": "Lukas Burger" }
+]

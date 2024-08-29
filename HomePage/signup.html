@@ -1,0 +1,99 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <link rel="stylesheet" href="signup.css">
+    <script src="signup.js"></script>
+</head>
+<body>
+
+   <!-- navigation bar -->
+   <section>
+    <nav>
+      <div class="nav_content">
+        <div class="logo">
+          <a href="#">Online Livestock</a>
+        </div>
+        <ul class="nav_links">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="aboutUs.html">About Us</a></li>
+          <li><a href="stock.html">Stock</a></li>
+          <li><a href="checkout.html">Cart</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="signup.html">Sign Up</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </div>
+    </nav>
+  </section>
+
+  <!-- different sign up screen set up -->
+
+  <center>
+    <h1>Create your Account</h1>
+    <p>Please select your account type</p>
+    <span><input name="account" type="radio"> Individual Account  
+    <input name="account" type="radio"> Business Account </span>
+ </center>
+
+  <form action="/register" method="POST">
+    <label  for="firstname">First Name:</label>
+    <input type="text" id="firstname" name="firstname" required><br><br>
+  
+    <label for="lastname">Last Name:</label>
+    <input type="text" id="lastname" name="lastname" required><br><br>
+  
+    <label  for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+  
+    <label  for="mobileNumber">Phone Number:</label>
+    <input type="text" id="mobileNumber" name="mobileNumber" required><br><br>
+  
+    <label  for="password">Password:</label>
+    <input type="password" id="password" name="password" required><br><br>
+  
+    <button type="submit">Register</button>
+  </form>
+  
+  
+<!-- create your account section -->
+     <section>
+        <div class="accContainer">
+            
+                <!-- footer of the container -->
+                <center>
+                <div class="footer">
+                  <p><input type="checkbox" name="consent">I would like to receive specials from Uhambo</p>
+                   <p>By clicking create account, you agree with our <a href="#">Terms & Conditions</a></p>
+                   <!-- <button data-modal-target="#modal" class= "accButton" type="submit">Create Account</button> -->
+                   <p>Already have an account?</p> 
+                   <a href="login.html"><button class="loginButton">Login</button></a>
+                </div>
+            </center>
+            </div>  
+        
+             <!-- <button data-modal-target="#modal" class= "accButton" type="submit">Create Account</button> -->
+            <!-- <p>Already have an account?</p> -->
+            <!-- <a href="login.html"><button class="loginButton">Login</button></a> -->
+
+            <!-- congrats pop up once account created -->
+           <div class="modal active" id="modal">
+
+               <div class="modal-header">
+                   <div class="title">Congrats</div>
+                   <button data-close-button class="close-button">&times;</button>
+               </div>
+               <div class="modal-body">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi maxime velit, alias quo dolores odio porro similique at dignissimos. Quis error aspernatur similique ut voluptate facere veniam esse ullam, quam fugiat doloribus officia voluptatem earum ducimus unde inventore provident odit impedit! Sit pariatur obcaecati optio nihil itaque assumenda velit est?
+              </div>
+
+           </div>
+           <div class="active" id="overlay"></div>
+
+        </div>
+     </section>
+
+     <script src = "signup.js"></script>
+</body>
+</html>

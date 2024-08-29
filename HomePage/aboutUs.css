@@ -1,0 +1,468 @@
+.wrap {
+  position: relative;
+  border: 6px solid white;
+}
+
+/* removes underline */
+a {
+  text-decoration: none;
+}
+/* 
+  navigation banner  */
+nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background: rgb(19, 98, 98);
+   z-index: 1; /*stops the overlapping of nav bar */
+  /* padding: 20px; */
+}
+
+/* edit content in navigation banner */
+nav .nav_content {
+  height: 100%;
+  max-width: 440px;
+  /* margin-left: 20px; */
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /*manage content in same line*/
+}
+
+/* edit logo */
+nav .nav_content .logo a {
+  font-size: 30px;
+  font-weight: 500;
+  color: white;
+  margin-left: -200%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* editing the text of the links */
+nav .nav_content .nav_links {
+  display: flex;
+
+  /* align-items: right; */
+  margin-right: -100%;
+}
+
+nav .nav_links li {
+  list-style: none;
+  margin: 0 10px;
+}
+
+nav .nav_links a {
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* editing the container the video is in */
+#videoBanner {
+  display: flex;
+  margin-top: 3%;
+}
+
+/* editing the video displayed */
+#videoBanner video {
+  width: 100%;
+  /* height: 100vh;  */
+  background-size: cover;
+}
+
+/* editing the text on the video */
+#videoBanner h1 {
+  position: absolute;
+  padding-top: 3%;
+  padding-left: 68%;
+  /* padding-top: 31%;
+    padding-left: 15%; */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(19, 98, 98);
+  font-size: 50px;
+}
+
+/* editing the text on the video */
+#videoBanner p {
+  position: absolute;
+  padding-top: 8%;
+  padding-left: 68%;
+  /* padding-top: 36%;
+    padding-left: 15%; */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(0, 0, 0);
+  font-size: 30px;
+}
+
+/* editing the responsivness of the text */
+#aboutPara {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* editing the text container */
+#aboutPara .textContainer {
+  padding: 70px 70px 70px 70px;
+}
+
+/* editing the about us heading */
+#aboutPara .textContainer h1 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 50px;
+  color: rgb(19, 98, 98);
+}
+
+/* editing the about us paragraph */
+#aboutPara .textContainer p {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 30px;
+  color: rgb(0, 0, 0);
+}
+
+/* editing the full container */
+#iconStory .iconsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 50px 50px 30px 50px;
+}
+
+/* editing the individual container per icon */
+#iconStory .wheatIcon {
+  border: 5px solid rgb(19, 98, 98);
+  border-radius: 20%;
+  padding: 70px 70px 70px 70px;
+}
+
+/* editing the actual icon */
+#iconStory .wheatIcon i {
+  font-size: 80px;
+  color: rgb(19, 98, 98);
+}
+
+/* editing the individual container per icon */
+#iconStory .cowIcon {
+  border: 5px solid rgb(19, 98, 98);
+  border-radius: 20%;
+  padding: 70px 70px 70px 70px;
+}
+
+/* editing the actual icon */
+#iconStory .cowIcon i {
+  font-size: 70px;
+  color: rgb(19, 98, 98);
+}
+
+/* editing the individual container per icon */
+#iconStory .trailerIcon {
+  border: 5px solid rgb(19, 98, 98);
+  border-radius: 20%;
+  padding: 70px 70px 70px 70px;
+}
+
+/* editing the actual icon */
+#iconStory .trailerIcon i {
+  font-size: 70px;
+  color: rgb(19, 98, 98);
+}
+
+/* editing the individual container per icon */
+#iconStory .peopleIcon {
+  border: 5px solid rgb(19, 98, 98);
+  border-radius: 20%;
+  padding: 70px 70px 70px 70px;
+}
+
+/* editing the actual icon */
+#iconStory .peopleIcon i {
+  font-size: 70px;
+  color: rgb(19, 98, 98);
+}
+
+/* editing the responsiveness of the text under blocks */
+#iconStory .textUnder{
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 70px 50px 65px;
+  text-align: center;
+}
+
+#iconStory .textUnder .wheatText{
+    text-align: center;
+} 
+
+/* editing the style of text under blocks */
+#iconStory .textUnder .wheatText p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}
+
+/* editing the style of text under blocks */
+#iconStory .textUnder .cowText p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}
+
+/* editing the style of text under blocks */
+#iconStory .textUnder .trailerText p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}
+
+/* editing the style of text under blocks */
+#iconStory .textUnder .peopleText p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}
+
+/* edits the container holding the 2 containers vision and mission */
+#visCon .visionContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 50px 50px 100px 50px;
+}
+
+/* editing the vision container */
+.vision{
+     background-color: rgb(19, 98, 98);
+     width: 45%;
+     height: 20%;
+     padding: 2% 0 2% 1%;
+}
+
+/* editing the vision text heading */
+#visCon .visionContainer .vision h2{
+    font-size: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: azure;
+}
+
+/* editing the vision text */
+#visCon .visionContainer .vision p{
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+/* editing the vision container */
+.mission{
+  background-color: rgba(19, 98, 98, 0.815);
+  width: 45%;
+  height: 20%;
+  padding: 2% 0 2% 1%;
+}
+
+/* editing the vision text heading */
+ .mission h2{
+ font-size: 50px;
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ color: azure;
+}
+
+/* editing the vision text */
+ .mission p{
+ font-size: 24px;
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ color: white;
+}
+
+/* editing the vision image */
+ .visImage{
+  width: 45%;
+  height: 20%;
+  padding: 2% 0 2% 1%;
+}
+
+/* editing the slogan next to the picture flip card */
+.flipSlogan{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* padding: 50px 50px 100px 50px; */
+}
+
+/* editing the flip card container*/
+ .contBlock{
+  width: 700px;
+  height: 600px;
+  display: flex;
+  /* justify-content: center; */
+  margin: 100px 100px 100px 100px;
+}
+
+.contBlock:hover > .card {
+  cursor: pointer;
+  transform: rotateY(180deg) ;
+  perspective: 800px;/*makes it look 3D on flip*/
+}
+
+/* editing the actual card */
+ .card{
+   height: 100%;
+   width: 100%;
+   position: relative;
+   transition: transform 1500ms;
+   transform-style: preserve-3d;
+}
+
+/* editing the front and back of card so same size */
+ .front,.back{
+     height: 100%;
+     width: 100%;
+     border-radius: 2rem;
+     box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+     position: absolute;
+     backface-visibility: hidden;
+}
+
+/* editing the front of card */
+
+  /* background-image: url("images/0dde13dd-5819-4df6-8cd1-75a7d2243428.jpg"); 350 500 */
+
+
+/* editing the back of card */
+.back{
+   background-color: rgb(19, 98, 98);
+   transform: rotateY(180deg);
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 2rem;
+   
+}
+
+/* editing the heading on back of card */
+.back h1{
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-size: 50px;
+   color: rgba(255, 255, 255, 0.653);
+}
+
+/* editing the heading on back of card */
+.back p{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 25px;
+  color:white;
+  padding-left: 50px;
+  padding-right: 50px;
+  
+}
+
+/* editing the slogan position next to the flip card */
+.flipSlogan .slogan{
+  margin-right: 10%;
+  margin-top: 20%;
+}
+
+/* editing the slogan heading next to the flip card */
+ .slogan h2{
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   color: rgb(19, 98, 98);
+   font-size: 50px;
+}
+
+/* editing the slogan text next to the flip card */
+.slogan p{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(0, 0, 0);
+  font-size: 30px;
+}
+
+/* editing the slogan position next to the flip card 2 */
+.flipSlogan .slogan_slogan1{
+  margin-left: 10%;
+  margin-top: 20%;
+}
+
+/* editing the slogan heading next to the flip card 2 */
+.slogan_slogan1 h2{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(19, 98, 98);
+  font-size: 50px;
+}
+
+/* editing the slogan text next to the flip card 2*/
+.slogan_slogan1 p{
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ color: rgb(0, 0, 0);
+ font-size: 30px;
+}
+
+
+/* makes the footer responsive */
+footer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: rgba(19, 98, 98, 0.645);
+  padding-left: 8px;
+  padding-right: 8px;
+  /* background-image: url("images/IMG_0542.jpeg"); */
+}
+
+/* puts the text in right format */
+footer .column{
+  display: flex;
+  flex-direction: column; /*puts the text in a column under ea. other*/
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+/* footer .logo{
+    margin-bottom: 30px;
+    width: 40px;
+    height: 40px;
+} */
+
+footer h4{
+  font-size: 20px;
+  padding-bottom: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(19, 98, 98);
+}
+
+footer p{
+  font-size: 16px;
+  margin: 0 0 8px 0; /*top right bottom left*/
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+}
+
+footer a{
+  font-size: 16px;
+  color: #222;
+  margin-bottom: 10px; /*top right bottom left*/
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+}
+
+footer .follow{
+    margin-top: 20px;
+}
+
+footer .follow i{
+  color: white;
+  cursor: pointer;
+  padding-right: 4px;
+  font-size: 40px;
+}
+
+footer i:hover,
+footer a:hover{
+   color: #088178;
+}
+
+footer .copyright{
+  width: 100%;
+  text-align: center;
+}
+
+
+
+
+
