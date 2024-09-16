@@ -1,42 +1,16 @@
-// const openModalButtons = document.querySelectorAll("[data-modal-target]")
-// const closeModalButtons = document.querySelectorAll("[data-modal-close]")
-// const overlay = document.getElementById("overlay")
 
-// openModalButtons.forEach(button => {
-//     button.addEventListener("click", () => {
-//         const modal = document.querySelector(button.dataset.modalTarget)
-//         openModal(modal)
-//     })
-// })
-
-// closeModalButtons.forEach(button => {
-//     button.addEventListener("click", () => {
-//         const modal = button.closest(".modal")
-//         closeModal(modal)
-//     })
-// })
-
-// function openModal(modal){
-//     if(modal == null) return
-//     modal.classList.add("active")
-//     overlay.classList.add("active")
-// }
-
-// function closeModal(modal){
-//     if(modal == null) return
-//     modal.classList.remove("active")
-//     overlay.classList.remove("active")
-// }
-
+//listens for when the submit button is pressed for function to run
 document.getElementById('signup-form').addEventListener('submit', function(e) {
     e.preventDefault();
 
+    //gives these variables the values inputed by the user in the input block
     const firstname = document.getElementById('firstname').value;
     const lastname = document.getElementById('lastname').value;
     const email = document.getElementById('email').value;
     const mobileNumber = document.getElementById('mobileNumber').value;
     const password = document.getElementById('password').value;
 
+    //converts to JSON
     fetch('/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -44,6 +18,8 @@ document.getElementById('signup-form').addEventListener('submit', function(e) {
     })
     .then(response => response.text())
     .then(data => {
+        //data is the plain text received by the server
+        //this displays a pop up alert when successful
         alert(data);
     })
     .catch(error => {

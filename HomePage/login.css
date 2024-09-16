@@ -83,7 +83,7 @@ nav .nav_links a {
 }
 
 /* editing the footer buttons */
-#login-form .continueBt{
+#login-form button{
   background-color: rgb(255, 255, 255);
   color: rgb(19, 98, 98);
   border: 1px solid rgb(19, 98, 98);
@@ -96,7 +96,7 @@ nav .nav_links a {
 }
 
 /* hover over button feature */
-#login-form .continueBt:hover{
+#login-form button:hover{
   background-color: rgb(19, 98, 98);
   color: white;
 

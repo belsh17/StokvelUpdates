@@ -219,22 +219,6 @@ nav .nav_links a {
 }
 
 
-/* #jumpButton {
-  position: absolute;
-  bottom: 20px; /* Position the button at the bottom of the game area 
-  right: 20px; /* Adjust the position as needed 
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #4CAF50; 
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-} 
-
-#jumpButton:hover {
-  background-color: #45a049; 
-} */
 
 .bannerBottom{
    margin-top: 50px;

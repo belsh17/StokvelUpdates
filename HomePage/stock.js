@@ -12,7 +12,7 @@ function remove()
 
 
 
-//blackbox add to cart 
+
 //
 
 //get the cart list element from html and assigns to variable cartList
@@ -154,7 +154,7 @@ document.querySelectorAll('.add-to-cart').forEach(button => {
 //Load cart when page loads 
 loadCart();
 
-//blackbox help
+
 // Get the checkout button this redirects to checkout page
 const checkoutBtn = document.getElementById('checkout');
 
@@ -164,9 +164,6 @@ checkoutBtn.addEventListener('click', () => {
   window.location.href = 'checkout.html';
 });
 
-//end of blackbox help
 
-//
-//end of blackbox add to cart
 
 

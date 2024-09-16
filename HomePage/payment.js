@@ -20,20 +20,7 @@ function displayPaymentCart() {
             `;
             paymentCartList.insertAdjacentHTML('beforeend', cartItemHTML);
         });
-        //testing out the delivery fee
-        // // Calculate subtotal
-        // const subtotal = shoppingCart.reduce((acc, item) => acc + item.price * item.quantity, 0);
         
-        // // Calculate total including delivery fee
-        // const total = subtotal + DELIVERY_FEE;
-
-        // // Update the total display
-        // paymentCartTotal.innerHTML = `
-        //     <p>Subtotal: R${subtotal.toLocaleString('en-US', { minimumFractionDigits: 2 })}</p>
-        //     <p>Delivery Fee: R${DELIVERY_FEE.toLocaleString('en-US', { minimumFractionDigits: 2 })}</p>
-        //     <p><strong>Total: R${total.toLocaleString('en-US', { minimumFractionDigits: 2 })}</strong></p>
-        // `;
-        //end of test
         const total = shoppingCart.reduce((acc, item) => acc + item.price * item.quantity, 0);
         paymentCartTotal.textContent = `Total: R${total.toLocaleString('en-US', { minimumFractionDigits: 2 })}`;
     }

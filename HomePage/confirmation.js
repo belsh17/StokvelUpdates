@@ -19,7 +19,7 @@ document.addEventListener('keydown', (event) => {
 //     }
 // });
 
-
+// function for stick man to jump if 'isJumping' exists
 function jump() {
     if (isJumping) return;
     isJumping = true;
